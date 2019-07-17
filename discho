@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [[ $1 = "-c" ]]; then
+
+    jq '."channel" = ''"'"$2"'"' $HOME/.discho/config.json > /tmp/temp.json && cat /tmp/temp.json > $HOME/.discho/config.json
+
+    echo $(</dev/stdin) > /tmp/discho
+    node $HOME/.discho/discho.js 
+
+elif [[ $1 = "-t" ]]; then
+    
+    jq '."channel" = ''"'"$2"'"' $HOME/.discho/config.json > /tmp/temp.json && cat /tmp/temp.json > $HOME/.discho/config.json
+    echo "Token set to ""$2""!"
+
+elif [[ $1 = "-h" ]]; then
+    
+    echo "Discho by Elisha Shaddock"
+    echo "discho -c <channel-name> to send to a specific channel. defaults to 'general', and stays on the last one you sent to"
+    echo "discho -t <TOKEN> sets bot token for the bot"
+    echo "discho -h shows this"
+    echo "discho install: installs this script to /usr/bin/ for systemwide use"
+ 
+elif [ $? != 0 ]; then
+
+    echo $(</dev/stdin) > /tmp/discho
+    node $HOME/.discho/discho.js
+
+elif [ $1 = "install" ]; then
+
+    sudo cp $HOME/.discho/discho /usr/bin/
+    echo "Installed to /usr/bin/"
+
+fi
