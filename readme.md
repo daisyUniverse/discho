@@ -29,7 +29,7 @@ Node.JS, jq, bash
 Copy all files to ~/.discho, then run 
 
 ```bash
-./discho instal 
+./discho install 
 ```
 
 Now, you can run
