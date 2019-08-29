@@ -31,7 +31,7 @@ elif [[ $1 = "-cb" ]]; then
 
 elif [[ $1 = "-t" ]]; then
     
-    jq '."channel" = ''"'"$2"'"' $HOME/.discho/config.json > /tmp/temp.json && cat /tmp/temp.json > $HOME/.discho/config.json
+    jq '."token" = ''"'"$2"'"' $HOME/.discho/config.json > /tmp/temp.json && cat /tmp/temp.json > $HOME/.discho/config.json
     echo "Token set to ""$2""!"
 
 elif [[ $1 = "-h" ]]; then
