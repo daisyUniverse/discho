@@ -61,6 +61,7 @@ discho -c <channel-name> to send to a specific channel. defaults to 'general', a
 discho -t <TOKEN> sets bot token for the bot
 discho -u <FILEPATH> will upload this file as an attachement. Append -c <channel-name> to specify a channel, otherwise it will send to the last used
 discho -cb <FILEPATH> will upload this file as an attatchement, and attempt to post its content as a code block using its file extension as the syntax
+discho -dm <USER ID> sends a DM to a user
 discho -h shows this
 discho install: installs this script to /usr/bin/ for systemwide use
 ```

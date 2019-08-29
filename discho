@@ -41,9 +41,15 @@ elif [[ $1 = "-h" ]]; then
     echo "discho -t <TOKEN> sets bot token for the bot"
     echo "discho -u <FILEPATH> will upload this file as an attachement. Append -c <channel-name> to specify a channel, otherwise it will send to the last used"
     echo "discho -cb <FILEPATH> will upload this file as an attatchement, and attempt to post its content as a code block using its file extension as the syntax"
+    echo "discho -dm <USER ID> will DM a message to that user"
     echo "discho -h shows this"
     echo "discho install: installs this script to /usr/bin/ for systemwide use"
-	 
+
+elif [[ $1 = "-dm" ]]; then
+
+    echo $(</dev/stdin) > /tmp/discho
+    node $HOME/.discho/discho.js dm $2	 
+
 elif [ $? != 0 ]; then
 
     echo $(</dev/stdin) > /tmp/discho
