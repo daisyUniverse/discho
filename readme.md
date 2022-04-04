@@ -56,7 +56,7 @@ to set your bot token
 from `discho -h`...
 
 ```bash
-Discho by Elisha Shaddock
+Discho by Robin Universe
 discho -c <channel-name> to send to a specific channel. defaults to 'general', and stays on the last one you sent to
 discho -t <TOKEN> sets bot token for the bot
 discho -u <FILEPATH> will upload this file as an attachement. Append -c <channel-name> to specify a channel, otherwise it will send to the last used
